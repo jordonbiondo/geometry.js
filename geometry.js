@@ -4,22 +4,23 @@
 
   MIT-Style License
   Johan Nordberg <its@johan-nordberg.com>
-*/
+ */
 
 (function() {
-
-function pick() {
-  for (var i = 0; i < arguments.length; i++) {
-    if (arguments[i] !== undefined) return arguments[i];
-  }
-};
-
-function merge(o1, o2) {
-  var key, rv = {};
-  for (key in o1) rv[key] = o1[key];
-  for (key in o2) rv[key] = o2[key];
-  return rv;
-};
+  
+  function pick() {
+    for (var i = 0; i < arguments.length; i++) {
+      if (arguments[i] !== undefined) return arguments[i];
+    }
+    return undefined;
+  };
+  
+  function merge(o1, o2) {
+    var key, rv = {};
+    for (key in o1) rv[key] = o1[key];
+    for (key in o2) rv[key] = o2[key];
+    return rv;
+  };
 
 /*
   Class: Size
