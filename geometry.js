@@ -289,6 +289,18 @@
   Point.Zero = new Point(0, 0);
   
   /*
+   Constant: 
+   Horizontal unit vector <Point>
+   */
+  Point.I = new Point(1, 0);
+
+  /*
+   Constant: j
+   Vertical unit vector <Point>
+   */
+  Point.J = new Point(0, 1);
+  
+  /*
    Class: Rect
    An object that contains the location and dimensions of a rectangle.
    
