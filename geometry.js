@@ -1,9 +1,10 @@
 /*
-  Title: Geometry
-  Tools for working with objects in a two-dimensional coordinate system.
-
-  MIT-Style License
-  Johan Nordberg <its@johan-nordberg.com>
+ Title: Geometry
+ Tools for working with objects in a two-dimensional coordinate system.
+ 
+ MIT-Style License
+ 2011 Johan Nordberg <its@johan-nordberg.com>
+ 2013 Jordon Biondo <biondoj@mail.gvsu.edu>
  */
 
 (function() {
