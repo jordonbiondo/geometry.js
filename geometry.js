@@ -157,6 +157,13 @@
     this.x = parseFloat(pick(arguments[0].x, x));
     this.y = parseFloat(pick(arguments[0].y, y));
   };
+
+  
+  /*
+   Class: Vector
+   Alias to Point
+   */
+  var Vector = Point;
   
   /*
    Method: length
@@ -195,7 +202,7 @@
    
    <Point> containing both points added together.
    */
-  Point.prototype.addPoint = function(point) {
+  Point.prototype.add = function(point) {
     return new Point(this.x + point.x, this.y + point.y);
   };
   
@@ -212,7 +219,7 @@
    
    <Point> containing substracted point.
    */
-  Point.prototype.substractPoint = function(point) {
+  Point.prototype.sub = function(point) {
     return new Point(this.x - point.x, this.y - point.y);
   };
   
@@ -225,7 +232,7 @@
    
    factor - Factor to multiply by
    */
-  Point.prototype.multiply = function(factor) {
+  Point.prototype.mul = function(factor) {
     return new Point(this.x * factor, this.y * factor);
   };
   
@@ -246,7 +253,7 @@
    
    */
   Point.prototype.normalize = function() {
-    return this.multiply(1 / this.length());
+    return this.mul(1 / this.length());
   };
   
   /*
@@ -331,7 +338,7 @@
   Rect.fromPoints = function(point1, point2) {
     return new Rect({
       origin: point1,
-      size: Size.fromPoint(point2.substractPoint(point1))
+      size: Size.fromPoint(point2.sub(point1))
     });
   };
   
@@ -374,7 +381,7 @@
    
    */
   Rect.prototype.inset = function(delta) {
-    var origin = this.origin.addPoint(delta);
+    var origin = this.origin.add(delta);
     var size = new Size(this.size.width - delta.x * 2, this.size.height - delta.y * 2);
     return new Rect(origin, size);
   };
