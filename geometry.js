@@ -279,7 +279,7 @@
    Returns string representation of point
    */
   Point.prototype.toString = function() {
-    return ['<Point x: ', this.x, ' y: ', this.y, '>'].join('');
+    return ['(', this.x, ', ', this.y, ')'].join('');
   };
   
   /*
