@@ -161,12 +161,6 @@
 
   
   /*
-   Class: Vector
-   Alias to Point
-   */
-  var Vector = Point;
-  
-  /*
    Method: length
    
    Returns:
@@ -503,6 +497,12 @@
     return ['<Rect origin: ', this.origin.toString(),
             ' size: ', this.size.toString(), '>'].join('');
   };
+
+  /*
+   Class: Vector
+   Alias to Point
+   */
+  var Vector = Point;
   
   /*
    Packaging
@@ -513,8 +513,11 @@
   var geometry = {
     'Size': Size,
     'Point': Point,
+    'Vector': Vector,
     'Rect': Rect
   };
+
+  
   
   if (typeof define == 'function') {
     define(function() { return geometry; });
