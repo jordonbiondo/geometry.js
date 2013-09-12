@@ -160,7 +160,37 @@
   };
 
   
-  /*
+  /**
+   * Flip the x and y coordinate of a point
+   */
+  Point.prototype.flip = function() {
+    var t = this.x;
+    this.x = this.y;
+    this.y = t;
+  };
+  
+
+  /**
+   * Return this point flipped
+   */
+  Point.prototype.flipped = function() {
+    var p = this;
+    p.flip();
+    return p;
+  };
+  
+  Point.prototype.invert = function() {
+    this.x = -this.x;
+    this.y = -this.y;
+  };
+  
+  Point.prototype.inverted = function() {
+    var p = this;
+    p.invert();
+    return p;
+  };
+  
+   /*
    Method: length
    
    Returns:
